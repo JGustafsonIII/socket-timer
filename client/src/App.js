@@ -23,7 +23,7 @@ function App() {
   const onMessageSubmit = (e) => {
     e.preventDefault();
     const { name, message } = state;
-    socketRef.current.emit('message', { name, message });
+    socketRef.current.emit('chat message', { name, message });
     setState({ message: '', name });
   };
 
